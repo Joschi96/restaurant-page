@@ -21,6 +21,7 @@ export function createHome() {
                              as you dine above the clouds. Each course is designed to take you on a celestial journey, 
                              from airy appetizers that melt on your tongue to heavenly desserts that twinkle with the 
                              sweetness of the stars. Feel weightless, feel free – let your imagination soar as you feast in the sky.`;
+    paragraph.classList.add('home-paragraph');
     div.appendChild(paragraph);
 
     return div;

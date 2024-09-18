@@ -25,7 +25,7 @@ export function createMenu() {
     starters.forEach(starter => {
         const item = document.createElement('p');
         item.classList.add('menu-item');
-        item.innerHTML = `<strong>${starter.name}</strong>: ${starter.description}`;
+        item.innerHTML = `<strong>${starter.name}</strong> ${starter.description}`;
         lowAltitudeSection.appendChild(item);
     });
     div.appendChild(lowAltitudeSection);
@@ -47,7 +47,7 @@ export function createMenu() {
     mains.forEach(main => {
         const item = document.createElement('p');
         item.classList.add('menu-item');
-        item.innerHTML = `<strong>${main.name}</strong>: ${main.description}`;
+        item.innerHTML = `<strong>${main.name}</strong> ${main.description}`;
         midAltitudeSection.appendChild(item);
     });
     div.appendChild(midAltitudeSection);
@@ -69,7 +69,7 @@ export function createMenu() {
     desserts.forEach(dessert => {
         const item = document.createElement('p');
         item.classList.add('menu-item');
-        item.innerHTML = `<strong>${dessert.name}</strong>: ${dessert.description}`;
+        item.innerHTML = `<strong>${dessert.name}</strong> ${dessert.description}`;
         highAltitudeSection.appendChild(item);
     });
     div.appendChild(highAltitudeSection);
@@ -90,7 +90,7 @@ export function createMenu() {
     beverages.forEach(beverage => {
         const item = document.createElement('p');
         item.classList.add('menu-item');
-        item.innerHTML = `<strong>${beverage.name}</strong>: ${beverage.description}`;
+        item.innerHTML = `<strong>${beverage.name}</strong> ${beverage.description}`;
         beverageSection.appendChild(item);
     });
     div.appendChild(beverageSection);

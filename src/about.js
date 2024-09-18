@@ -14,6 +14,7 @@ export function createAbout() {
 
     paragraphs.forEach(text => {
         const paragraph = document.createElement('p');
+        paragraph.classList.add('about-paragraph');
         paragraph.textContent = text;
         div.appendChild(paragraph);
     });

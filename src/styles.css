@@ -16,12 +16,14 @@ html, body{
     height: 100%;
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-light);
-    overflow: auto;
+    overflow-x: hidden;
 }
 body{
     background: linear-gradient(  var(--highlight-blue), var(--background-light));
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
 }
 
 .container{
@@ -33,23 +35,30 @@ body{
     background-color: #f5f5f500; /* Light background for styling */
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.247);
-    overflow: hidden;
     height: auto;
+    min-height: calc(100vh - 3rem);
+    overflow: hidden;
 }
 
 #content{
     background-color: var(--background);
     width: 100%;
     flex-grow: 1;
-    padding: 1.5rem; 
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
 }
 
 .tab-content{
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-grow: 1;
 }
 
+/* Header styles */
 header{
     background-color: var(--highlight-red);
     color: white;
@@ -72,6 +81,11 @@ nav{
     font-size: 1.1rem;
     padding: 0 5rem;
     color: #0f0f0f;
+    width: 100%;
+}
+.about-paragraph, .home-paragraph{
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 #logo{
@@ -79,7 +93,7 @@ nav{
     height: 300px;
     margin: 0;
 }
-
+/* Navigation styles */
 nav button{
     background-color: var(--highlight-red);
     color: white;
@@ -112,7 +126,7 @@ span{
 .menu-container {
     width: 80%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
