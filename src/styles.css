@@ -27,7 +27,8 @@ body{
 }
 
 .container{
-    width: 1000px;
+    width: 90%; /* Use a percentage to allow flexibility */
+    max-width: 1000px; /* Still limit the width on larger screens */
     margin: 1.5rem 0;
     display: flex;
     flex-direction: column;
@@ -38,6 +39,12 @@ body{
     height: auto;
     min-height: calc(100vh - 3rem);
     overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Increase the flexibility on very small screens */
+    }
 }
 
 #content{
@@ -74,7 +81,15 @@ nav{
 .tab-content h1{
     font-size: 2.25rem;
     margin-bottom: 1rem;
+    margin-top: 2rem;
     color: var(--highlight-red);
+    text-align: center;
+}
+/* Adjust for phones */
+@media (max-width: 480px) {
+    .tab-content h1 {
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+    }
 }
 
 .tab-content p{
@@ -82,6 +97,20 @@ nav{
     padding: 0 5rem;
     color: #0f0f0f;
     width: 100%;
+}
+/* Adjust for phones */
+@media (max-width: 768px) {
+    .tab-content p {
+        padding: 0 2rem; /* Reduce padding on tablet-sized screens */
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .tab-content p {
+        padding: 0 1rem; /* Reduce padding even more for phones */
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
+    }
 }
 .about-paragraph, .home-paragraph{
     margin-bottom: 16px;
@@ -105,6 +134,14 @@ nav button{
     border-radius: 5px;
     outline: none;
 }
+/* Adjust button size for mobile */
+@media (max-width: 480px) {
+    nav button {
+        padding: 8px 16px;
+        margin: 5px; /* Reduce margin and padding for smaller screens */
+        width: 100%; /* Make buttons full-width for better touch usability */
+    }
+}
 
 nav button:hover{
     background-color: var(--highlight-red-dark);
@@ -122,7 +159,7 @@ span{
 }
 
 /* styles for menu */
-/* Container for the entire menu */
+/* Menu styles for desktop */
 .menu-container {
     width: 80%;
     margin: 0 auto;
@@ -131,18 +168,16 @@ span{
     line-height: 1.6;
 }
 
-/* Menu header */
 .menu-header {
     text-align: center;
     margin-bottom: 40px;
+    font-size: 2.25rem;
 }
 
-/* Each section of the menu */
 .menu-section {
     margin-bottom: 40px;
 }
 
-/* Section headers (Low Altitude, Mid Altitude, etc.) */
 .menu-section-header {
     font-size: 1.8em;
     border-bottom: 2px solid;
@@ -150,15 +185,68 @@ span{
     margin-bottom: 20px;
 }
 
-/* Individual menu items */
 .menu-item {
     font-size: 1.2em;
     margin-bottom: 10px;
     padding-left: 20px;
 }
 
-/* Strong (bold) for item names */
 .menu-item strong {
     font-size: 1.4em;
     display: block;
 }
+
+/* Responsive design for tablets and smaller */
+@media (max-width: 768px) {
+    .menu-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .menu-header {
+        font-size: 1.75rem;
+        margin-bottom: 30px;
+    }
+
+    .menu-section-header {
+        font-size: 1.6em;
+        padding-bottom: 8px;
+        margin-bottom: 15px;
+    }
+
+    .menu-item {
+        font-size: 1.1em;
+        padding-left: 15px;
+    }
+}
+
+/* Responsive design for phones */
+@media (max-width: 480px) {
+    .menu-container {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .menu-header {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .menu-section-header {
+        font-size: 1.4em;
+        border-bottom-width: 1px;
+        padding-bottom: 6px;
+        margin-bottom: 12px;
+    }
+
+    .menu-item {
+        font-size: 1em;
+        padding-left: 10px;
+        margin-bottom: 8px;
+    }
+
+    .menu-section {
+        margin-bottom: 30px;
+    }
+}
+
