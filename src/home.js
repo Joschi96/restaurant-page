@@ -4,15 +4,16 @@ export function createHome() {
     const div = document.createElement('div');
     div.classList.add('tab-content');
 
-    const header = document.createElement('h1');
-    header.textContent = "Dine Beyond the Clouds at The Floating Feast";
-    div.appendChild(header);
-
+    
     const img = document.createElement('img');
     img.src = logo;
     img.alt = "floating_feast_logo";
     img.id = "logo";
     div.appendChild(img);
+    
+    const header = document.createElement('h1');
+    header.innerHTML = 'Dine Beyond the Clouds at <span>The Floating Feast</span>';
+    div.appendChild(header);
 
     const paragraph = document.createElement('p');
     paragraph.textContent = `Leave the world behind and embark on a dining experience like no other.
